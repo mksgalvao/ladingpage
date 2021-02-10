@@ -314,9 +314,113 @@ header {
   font-weight: bold;
 }
 
+.content-about {
+  width: 50%;
+}
+
+.content-about .title-wrapper {
+  display: flex;
+  margin: 45px 6px 72px 0;
+}
+
+.content-about .title {
+  width: 102px;
+  height: 52px;
+  font-size: 36px;
+  font-family: Karla;
+  font-weight: bold;
+  line-height: 1.44;
+  letter-spacing: -1.6px;
+  color: #ffffff;
+}
+
+.content-about .red-ball {
+  width: 12px;
+  height: 12px;
+  border-radius: 50%;
+  background-color: #f24440;
+  margin-bottom: 20px;
+}
+
+.content-about .about-wrapper {
+  display: flex;
+  width: 100%;
+}
+
+.content-about .about-tag {
+  width: 18px;
+  height: 46px;
+  transform: rotate(-90deg);
+  font-family: Karla;
+  font-size: 15px;
+  font-weight: bold;
+  text-align: center;
+  color: white;
+  margin-top: 15px;
+}
+
+.content-about .box {
+  width: 390px;
+  min-height: 335px;
+  background-color: white;
+  text-align: center;
+  display: flex;
+  position: relative;
+  z-index: 1;
+}
+
+.content-about .box:before {
+  content: "";
+  position: absolute;
+  right: -7px;
+  top: -7px;
+  height: 95%;
+  width: 95%;
+  border-top: 7px solid #f24440;
+  border-right: 7px solid #f24440;
+}
+
+.content-about .box .box-text {
+  margin: 28px 15px 25px 24px;
+  font-family: Karla;
+  font-size: 18px;
+  line-height: 1.56;
+  color: #000000;
+}
+
+.content-about .quote {
+  width: 322px;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-end;
+  margin-left: 80px;
+}
+
+.content-about .quote .main-text {
+  margin-top: 80px;
+  font-family: Karla;
+  font-size: 24px;
+  font-weight: bold;
+  line-height: 1.5;
+  letter-spacing: -0.8px;
+  text-align: right;
+  color: #ffffff;
+}
+
+.content-about .quote .asign {
+  font-family: Helvetica;
+  font-size: 18px;
+  letter-spacing: -0.6px;
+  text-align: right;
+  color: #ffffff;
+}
+
 @media screen and (max-width: 1024px) {
   .content-header .red-button {
-    margin-right: 17px;
+    margin-right: 15px;
+  }
+  .content-about .box {
+    min-width: 390px;
   }
 }
 
