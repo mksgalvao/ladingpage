@@ -129,16 +129,16 @@
             <img class="small-image" src="./assets/videocall.png" alt="video call" >
           </div>
           <div class="big-image-frame">
-            <div class="video-image">
-            <img class="big-image" src="./assets/videoconferencebig.png" alt="video conference" >
+            <div class="video-image"  id="video-image-1">
+            <img class="big-image"  src="./assets/videoconferencebig.png" alt="video conference" >
             <img height="32" class="video-play" src="./assets/videoplay.png"  >
           </div>
           </div>
         </div>
         <div class="medias">
           <div class="big-image-frame">  
-          <div class="video-image">  
-          <img class="big-image" src="./assets/womantakenotes.png" alt="video conference" >
+          <div class="video-image"  id="video-image-2">  
+          <img class="big-image"  src="./assets/womantakenotes.png" alt="video conference" >
           <img height="32" class="video-play" src="./assets/videoplay.png" >
           </div>
 
@@ -150,12 +150,49 @@
       </div>
     </div>
   </main>
-  <div class="modal-wrapper">
+  <div class="modal-wrapper" id="video-modal">
     <div class="video-modal">
-      <iframe  class="video"  src="https://www.youtube.com/embed/watch?v=dQw4w9WgXcQ">
-      </iframe>
+      <iframe  class="video" src="https://www.youtube.com/embed/6Af6b_wyiwI" frameborder="0" allowfullscreen></iframe>
+    </iframe>
+    <span class="close">&times;</span>
+
     </div>
   </div>
+  <script>
+    const modal = document.getElementById("video-modal");
+    const videoImage1 = document.getElementById("video-image-1");
+
+    const videoImage2 = document.getElementById("video-image-2");
+
+    
+    const span = document.getElementsByClassName("close")[0];
+    
+    videoImage1.onclick = function() {
+      modal.style.display = "flex";
+    }
+
+    videoImage2.onclick = function() {
+      modal.style.display = "flex";
+    }
+    
+    span.onclick = function() {
+      modal.style.display = "none";
+    }
+
+    window.addEventListener('keydown', function (event) {
+  if (event.key === 'Escape') {
+    modal.style.display = 'none'
+  }
+})
+
+    
+    window.onclick = function(event) {
+      if (event.target == modal) {
+        modal.style.display = "none";
+      }
+    }
+
+    </script>
 </body>
 
 
